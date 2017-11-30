@@ -1,0 +1,226 @@
+body {
+    background-image: url("/TastyRecipesFW/resources/images/background.jpg");
+    margin: 1%;
+}
+h1 {
+    display: block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-top: 0.83em;
+    margin-bottom: 0.83em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+h1.logo {
+    text-align: center;
+    font-family: 'Akronim';font-size: 5em;
+    font-weight: normal;
+}
+h2.title {
+    font-size: 2em;
+}
+div {
+    display: block;
+}
+li {
+    display: list-item;
+}
+ul {
+    display: block;
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+ol {
+    display: block;
+    list-style-type: decimal;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 40px;
+}
+p {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+.heavytext {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 2em;
+}
+.loginOrRegister {
+    text-align: right;
+    font-family: Verdana;
+    font-size: 1em;
+}
+h2.home {
+    text-align: center;
+    font-family: Verdana;
+    font-size: 2em;
+}
+p.breadtext {
+    font-family: Verdana;
+    font-size: 1em;
+    background-color: white;
+}
+ul.breadtext {
+    font-family: Verdana;
+    font-size: 1em;
+    background-color: white;
+    list-style-type: none;
+}
+ul.list {
+    font-family: 'Verdana';
+    font-size: 1em;
+    background-color: white;
+    list-style-type: disc;
+    
+}
+.calendarfood {
+  width: 65%;
+  height: auto;
+  position: absolute;
+  left: 15%;
+  top: 30%;
+}
+.image {
+    width: 35%;
+    height: auto;  
+}
+
+/* CSS for the calendar */
+ul {list-style-type: none;}
+body {font-family: Verdana, sans-serif;}
+
+/* Month header */
+.month {
+    padding: 30px 25px;
+    width: 100%;
+    background: DarkBlue;
+    text-align: center;
+}
+
+/* Month list */
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month ul li {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color:#ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+/* Days (1-31) */
+.days {  
+    padding: 10px 0 ;
+    background: white;
+    margin: 0;  
+    height: 80%;
+}
+
+.days li {
+    border: 1px solid black;
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: left;
+    margin-bottom: 15px;
+    font-size:1em;
+    color:#777;
+    height: 12vw;
+    position: relative;
+}
+/* Highlight days from previous month */
+.days li .previous {
+    padding: 1px;
+    background: #A9A9A9;
+    color: white !important
+}
+
+/* The alert message box */
+.alert {
+    padding: 20px;
+    background-color: #f44336; /* Red */
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    text-align: center;
+}
+.notification {
+    padding: 20px;
+    background-color: green; 
+    color: white;
+    margin-bottom: 15px;
+    opacity: 0.8;
+    text-align: center;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+/* Add media queries for smaller screens */
+@media screen and (max-width: 1024px) {
+    .weekdays li, .days li {width: 13.3%;}        
+}
+@media screen and (max-width: 720px) {
+    .weekdays li, .days li {width: 12.0%;}
+    p.breadtext {font-size: 0.75em;}
+    .heavytext {font-size: 1.5em;}
+    ul.list {font-size: 0.75em;}
+    h1.logo {font-size: 3.3em}
+    h2.title {font-size: 1.5em;}
+}
+@media screen and (max-width: 450px) {
+    p.breadtext {font-size: 0.5em;}
+    .heavytext {font-size: 1em;}
+    ul.list {font-size: 0.5em;}
+    h1.logo {font-size: 2.5em}
+    h2.title {font-size: 1em;}
+}
+
+

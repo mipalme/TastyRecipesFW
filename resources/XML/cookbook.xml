@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cookbook version="46">
+
+    <recipe>            
+        <title>Meatballs (of the Swedish variety!)</title>      
+        <imagepath>/TastyRecipesFW/resources/images/meatballs.jpg</imagepath>
+        <quantity>1 portion</quantity>
+        <ingredient>
+            <li>7 meatballs</li>
+            <li>Some pasta or rice or potatoes (optional!)</li>
+            <li>Ketchup or gravy or jam (depending on preference)</li>
+        </ingredient>
+        <description>
+            <li>Take the meatballs out of the packaging. Now, cook them on medium to high heat for ten minutes.</li>
+            <li>Cook some side dish if you want (but no vegetables!!!).</li>
+            <li>Serve with ketchup or gravy or jam, and enjoy.</li>
+        </description>
+        
+    
+    </recipe>
+    
+    <recipe>
+        <title>Pancakes (of the Swedish variety!)</title>
+        <imagepath>/TastyRecipesFW/resources/images/pancakes.jpg</imagepath>
+        <quantity>2 portion</quantity>
+        <ingredient>
+            <li>4 eggs</li>
+            <li>6 dl milk</li>
+            <li>3 dl flour</li>
+            <li>Some jam or other topping that you like</li>
+        </ingredient>
+        <description>
+            <li>Crack the eggs in a bowl, and mix in the milk and flour. Stir until it is well mixed.</li>
+            <li>Pour some batter in a frying pan and flip it when the first side is done. When second side is done, the pancake is done! </li>
+            <li>Repeat until batter is depleted. Now serve with some jam or fruit or chocolate or whatever.</li>
+        </description>
+    </recipe>
+
+</cookbook>
