@@ -32,7 +32,7 @@ $recipeNumber = 0;
         </ul> 
         <p> <a href ="Pancakes"> Check out our pancakes recipe! </a> <br/> <br/>
             <?php
-            include_once "includes/comments.php";
+            include_once "includes/comments.php";            
             ?>
     </body>
 </html>

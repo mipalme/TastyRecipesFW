@@ -20,8 +20,12 @@ class Controller {
     }
 
     public function readComments($recipe) {
-        $cmh = new CommentHandler();
-        $cmh->getComments($recipe);
+        $cmh = new CommentHandler(null, $recipe, null);
+        return $cmh->getComments($recipe);
+    }
+    public function getAuthors($recipe){
+        $cmh = new CommentHandler(null, $recipe, null);
+        return $cmh->getAuthors($recipe);
     }
 
     public function postComment($comment, $recipe, $author) {     
@@ -29,8 +33,9 @@ class Controller {
         $cmh->postComment();
     }
 
-    public function deleteComment() {
-        $deleteComment = new DoDeleteComment();
+    public function deleteComment($comment, $recipe, $author) {
+        $cmh = new CommentHandler($comment, $recipe, $author);
+        $cmh->deleteComment();
     }
 
 }

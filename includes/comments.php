@@ -13,19 +13,19 @@ if ($this->session->get(Constants::STATUS) == 'commentDeleted') {
 <?php } ?>
 
 <?php
-
 //Loop through all the comments and post them in the order of their ID.       
-if ($result->num_rows > 0) {
+if (count($comments)> 0) {
+    
     // output data of each row
-    while ($row = $result->fetch_assoc()) {
+    for ($i = 0; $i < count($comments); $i++) {            
         ?>        
-        <form method="post" action="Comment">
+        <form method="post" action="DeleteComment">
             <p class="breadtext">
-                <?php echo $row["comment_author"] . ": " . $row["comment_content"]; ?>
-        <?php if ($_SESSION['u_uname'] == $row["comment_author"]) { ?>
-                    <button type="submit" class="deleteButton" name="delete" value=<?php echo $row["comment_postID"] ?>>
-                        Delete comment
-                    </button>
+                <?php echo $authors[$i] . ': '. $comments[$i]; ?>
+                 <input type='hidden' name ='commentAuthor' value='<?php echo $authors[$i]?>'>
+                 <input type='hidden' name ='commentContent' value='<?php echo $comments[$i]?>'>
+        <?php if ($authors[$i] == $this->session->get(Constants::USERNAME)) { ?>                 
+                    <input type="submit" value='Delete comment'>                                     
         <?php } ?>
             </p>
         </form>   

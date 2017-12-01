@@ -3,6 +3,7 @@
 namespace TastyRecipes\Model;
 
 use TastyRecipes\Integration\DatabaseHandler;
+use TastyRecipes\Util\Constants;
 
 /**
  * Description of CommentHandler
@@ -24,20 +25,32 @@ class CommentHandler {
         $database->insertComment($this->comment, $this->recipe, $this->author);
     }
 
-    public function deleteComment($postID) {
+    public function deleteComment() {      
         $database = new DatabaseHandler($this->author, null, $this->comment);
-        $database->removeComment($postID);
+        $database->removeComment($this->recipe);
     }
 
     public function getComments($recipe) {
-        $database = new DatabaseHandler($this->author, null, $this->comment);
+        $database = new DatabaseHandler(null, null, null);
         $result = $database->getAllComments($recipe);
         $comments = array();
         if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                $comments[] = $row["comment_author"] . ": " . $row["comment_content"];
+            while ($row = $result->fetch_assoc()) {             
+                $comments[] = $row["comment_content"];
             }
         }
         return $comments;
+    }
+    public function getAuthors($recipe) {
+        $database = new DatabaseHandler(null, null, null);
+        $result = $database->getAllAuthors($recipe);
+        $authors = array();
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $authors[] = $row["comment_author"];            
+            }
+        }
+        return $authors;
+        
     }
 }

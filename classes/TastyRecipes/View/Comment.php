@@ -25,7 +25,6 @@ private $comment;
         
         $contr->postComment($this->comment, $recipe, $author);
         
-        //$this->session->set(Constants::STATUS, 'commentDeleted');
         
         return $recipe;
     }

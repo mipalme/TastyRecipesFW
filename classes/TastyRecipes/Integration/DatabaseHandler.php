@@ -47,8 +47,9 @@ class DatabaseHandler {
                 . " VALUES ('$author','$recipe','$validatedcomment')";
         mysqli_query($this->conn, $sql);   
     }
-    public function removeComment($postID){
-         mysqli_query($this->conn, "DELETE FROM comment WHERE comment.comment_postID = '$postID'");
+    public function removeComment($recipe){     
+        $sql = "DELETE FROM comment WHERE comment_content = '$this->comment' AND comment_author = '$this->uname' AND comment_recipe = '$recipe'";
+        mysqli_query($this->conn, $sql); 
     }
     public function getAuthor($postID){
         $sql = "SELECT comment_author FROM comment WHERE comment_postID='$postID'";
@@ -58,6 +59,14 @@ class DatabaseHandler {
         return $author;
     }
     public function getAllComments($recipe){
+        $sql = "SELECT comment_postID, comment_author, comment_content FROM comment WHERE comment_recipe = '$recipe'";
+        return mysqli_query($this->conn, $sql);
+    }
+    public function getPostID(){
+        $sql = "SELECT comment_postID FROM comment WHERE comment_content = '$this->comment'";
+        return mysqli_query($this->conn, $sql);
+    }
+    public function getAllAuthors($recipe){
         $sql = "SELECT comment_postID, comment_author, comment_content FROM comment WHERE comment_recipe = '$recipe'";
         return mysqli_query($this->conn, $sql);
     }
