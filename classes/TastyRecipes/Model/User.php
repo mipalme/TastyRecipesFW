@@ -35,7 +35,7 @@ class User {
     
     public function register ($uname, $pwd){     
         $database = new DatabaseHandler($uname, $pwd, null);
-        if (!preg_match("/^[a-zA-Z]*$/", $uname) || !preg_match("/^[a-zA-Z]*$/", $pwd)) {
+        if (!ctype_alnum($uname) || !ctype_alnum($pwd)) {
             return 'InvalidCharacters';            
         }
         elseif(mysqli_num_rows($database->getUser($uname))>0){

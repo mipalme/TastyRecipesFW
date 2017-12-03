@@ -19,7 +19,7 @@ class Registration extends AbstractRequestHandler {
     }
     
     protected function doExecute() {
-        if(empty($this->username) | empty($this->password)){
+        if(empty($this->username) || empty($this->password)){
             return 'index';
         }
        
