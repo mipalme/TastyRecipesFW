@@ -5,11 +5,7 @@ namespace TastyRecipes\Model;
 
 use TastyRecipes\Integration\DatabaseHandler;
 
-/**
- * Description of User
- *
- * @author Michael
- */
+
 class User {
     private $uname, $pwd;
 

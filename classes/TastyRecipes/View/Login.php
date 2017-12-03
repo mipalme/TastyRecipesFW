@@ -6,13 +6,13 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 
 /**
- * Shows the login page of the application.
+ * Handles a login request from the user, and redirects accordingly.
  */
 class Login extends AbstractRequestHandler {
 private $username, $password;
     
     public function setUsername($username){
-        $this->username = $username;
+        $this->username = htmlentities($username);
     }
     public function setPassword($password){
         $this->password = $password;

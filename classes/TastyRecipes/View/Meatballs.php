@@ -13,7 +13,6 @@ class Meatballs extends AbstractRequestHandler {
     protected function doExecute() {
         
         $contr = $this->session->get(Constants::CONTR_KEY_NAME);
-        $this->session->set(Constants::CONTR_KEY_NAME, $contr);
         
         $this->session->set(Constants::RECIPE, 'meatballs_recipe');
         
@@ -21,6 +20,8 @@ class Meatballs extends AbstractRequestHandler {
         $allAuthors = $contr->getAuthors($this->session->get(Constants::RECIPE));
         $this->addVariable('comments', $allComments);  
         $this->addVariable('authors', $allAuthors);   
+        
+        $this->session->set(Constants::CONTR_KEY_NAME, $contr);
         
         return 'meatballs_recipe';
     }

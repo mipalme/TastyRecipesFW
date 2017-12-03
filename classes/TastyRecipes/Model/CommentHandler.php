@@ -3,10 +3,9 @@
 namespace TastyRecipes\Model;
 
 use TastyRecipes\Integration\DatabaseHandler;
-use TastyRecipes\Util\Constants;
 
 /**
- * Description of CommentHandler
+ * A class in which all comment handling is done.
  *
  * @author Michael
  */

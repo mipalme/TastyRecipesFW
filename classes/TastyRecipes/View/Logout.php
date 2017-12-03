@@ -6,7 +6,7 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 
 /**
- * Shows the login page of the application.
+ * Logs out and brings the user to the front page.
  */
 class Logout extends AbstractRequestHandler {
 

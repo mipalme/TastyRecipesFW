@@ -6,19 +6,23 @@ use Id1354fw\View\AbstractRequestHandler;
 use TastyRecipes\Util\Constants;
 
 /**
- * Shows the registration page of the application.
+ * This class handles registration.
  */
 class Registration extends AbstractRequestHandler {
     private $username, $password;
     
     public function setUsername($username){
-        $this->username = $username;
+        $this->username = htmlentities($username);
     }
     public function setPassword($password){
         $this->password = $password;
     }
     
     protected function doExecute() {
+        if(empty($this->username) | empty($this->password)){
+            return 'index';
+        }
+       
         $contr = $this->session->get(Constants::CONTR_KEY_NAME);
         $this->session->set(Constants::CONTR_KEY_NAME, $contr);
         
