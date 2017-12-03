@@ -30,7 +30,7 @@ class User {
                 }
             }
         }
-        return $database->checkLogin($this->uname, $this->pwd);
+        return $database->checkLogin($this->uname);
     }
     
     public function register ($uname, $pwd){     

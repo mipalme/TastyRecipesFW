@@ -14,7 +14,7 @@
     <body>
         <?php  if ($this->session->get(Constants::USERNAME) != null) { ?>   
          <p class ="loginOrRegister"> <a href ="Logout"> Log out </a> </p>
-         <p class ="loginOrRegister"> Logged in as: <?php echo $this->session->get(Constants::USERNAME); ?> </p>
+         <p class ="loginOrRegister"> Logged in as: <?php echo htmlentities($this->session->get(Constants::USERNAME)); ?> </p>
         <?php } elseif ($this->session->get(Constants::USERNAME) == null) { ?>
          <p class ="loginOrRegister"> <a href ="ShowLogin"> Log in </a> </p>
          <p class ="loginOrRegister"> <a href ="ShowRegistration"> Register here </a> </p>

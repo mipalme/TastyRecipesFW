@@ -51,13 +51,6 @@ class DatabaseHandler {
         $sql = "DELETE FROM comment WHERE comment_content = '$this->comment' AND comment_author = '$this->uname' AND comment_recipe = '$recipe'";
         mysqli_query($this->conn, $sql); 
     }
-    public function getAuthor($postID){
-        $sql = "SELECT comment_author FROM comment WHERE comment_postID='$postID'";
-        $temp= mysqli_query($this->conn, $sql);
-        $temp2= mysqli_fetch_object($temp);
-        $author=$temp2->comment_author;
-        return $author;
-    }
     public function getAllComments($recipe){
         $sql = "SELECT comment_postID, comment_author, comment_content FROM comment WHERE comment_recipe = '$recipe'";
         return mysqli_query($this->conn, $sql);

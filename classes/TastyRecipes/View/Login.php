@@ -12,7 +12,7 @@ class Login extends AbstractRequestHandler {
 private $username, $password;
     
     public function setUsername($username){
-        $this->username = htmlentities($username);
+        $this->username = $username;
     }
     public function setPassword($password){
         $this->password = $password;

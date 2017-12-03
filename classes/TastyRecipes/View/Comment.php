@@ -12,7 +12,7 @@ class Comment extends AbstractRequestHandler {
 private $comment;
     
     public function setComment($comment){      
-        $this->comment = htmlentities($comment);
+        $this->comment = $comment;
     }
     
     protected function doExecute() {

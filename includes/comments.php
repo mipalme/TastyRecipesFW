@@ -22,8 +22,8 @@ if (count($comments)> 0) {
         <form method="post" action="DeleteComment">
             <p class="breadtext">
                 <?php echo $authors[$i] . ': '. $comments[$i]; ?>
-                 <input type='hidden' name ='commentAuthor' value='<?php echo $authors[$i]?>'>
-                 <input type='hidden' name ='commentContent' value='<?php echo $comments[$i]?>'>
+                 <input type='hidden' name ='commentAuthor' value='<?php echo htmlentities($authors[$i])?>'>
+                 <input type='hidden' name ='commentContent' value='<?php echo htmlentities($comments[$i])?>'>
         <?php if ($authors[$i] == $this->session->get(Constants::USERNAME)) { ?>                 
                     <input type="submit" value='Delete comment'>                                     
         <?php } ?>
